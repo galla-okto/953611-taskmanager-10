@@ -23,7 +23,7 @@ const createColorsMarkup = (colors, currentColor) => {
     .join(`\n`);
 };
 
-const createRepeatingDaysMarkup = (daysWeek, repeatingDays) => {
+const createRepeatingDaysMarkup = (days, repeatingDays) => {
   return days
     .map((day) => {
       const isChecked = repeatingDays[day];
@@ -85,7 +85,7 @@ export const createTaskEditTemplate = (task) => {
 
   const tagsMarkup = createHashtags(tags);
   const colorsMarkup = createColorsMarkup(colorsTask, color);
-  const repeatingDaysMarkup = createRepeatingDaysMarkup(days, repeatingDays);
+  const repeatingDaysMarkup = createRepeatingDaysMarkup(daysWeek, repeatingDays);
 
   return (
     `<article class="card card--edit card--${color} ${repeatClass} ${deadlineClass}">
