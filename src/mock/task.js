@@ -32,8 +32,8 @@ const generateRepeatingDays = () => {
   });
 };
 
-const generateTags = (tags) => {
-  return tags
+const generateTags = (tagsArray) => {
+  return tagsArray
     .filter(() => Math.random() > 0.5)
     .slice(0, 3);
 };
